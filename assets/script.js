@@ -11,7 +11,9 @@ console.log(startEl);
 console.log(questionsEl);
 
 startEl.on('click', function (){
-    timer = setInterval(time(), 1000);
+    seconds = 61;
+    time();
+    timer = setInterval(time, 1000);
     startEl.addClass('invisible');
     questionsEl.addClass('p-1');
     var newEl = $("<h1>" + questionList[questionsAnswered].question + "</h1>");
@@ -29,5 +31,5 @@ startEl.on('click', function (){
 function time(){
     seconds--;
     timeEl.text(seconds);
-    console.log("time ran");
+    // console.log("time ran");
 }
